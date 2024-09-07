@@ -8,3 +8,18 @@ public class tarea1 {
         }
         System.out.println("Hay " + count + " números Machete menores a 10,000.");
     }
+
+    public static boolean isMachete(int number) {
+        int temp = number;
+        for (int i = 0; i < 50; i++) {
+            int sum = temp + reverseNumber(temp);
+            if (isPalindrome(sum)) {
+                System.out.println(temp + " + " + reverseNumber(temp) + " = " + sum);
+                temp = sum;
+            } else {
+                temp = sum;
+            }
+        }
+        return true;
+    }
+
