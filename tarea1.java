@@ -23,3 +23,16 @@ public class tarea1 {
         return true;
     }
 
+    public static int reverseNumber(int number) {
+        int reversed = 0;
+        while (number > 0) {
+            reversed = (reversed * 10) + (number % 10);
+            number /= 10;
+        }
+        return reversed;
+    }
+
+    public static boolean isPalindrome(int number) {
+        return number == reverseNumber(number);
+    }
+}
