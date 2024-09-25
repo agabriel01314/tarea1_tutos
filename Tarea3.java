@@ -11,3 +11,19 @@ public class Tarea3 {
             if (map.containsKey(complement)) {
                 return new int[] { map.get(complement), i };  // Retornar los índices
             }
+
+            map.put(nums[i], i);
+        }
+        
+        return new int[] {};
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {2, 7, 11, 15};
+        int target = 9;
+
+        int[] result = findTwoSum(nums, target);
+        
+        System.out.println("Índices: [" + result[0] + ", " + result[1] + "]");
+    }
+}
