@@ -3,7 +3,18 @@ import java.util.Scanner;
 public class Tarea7 {
 
     public static boolean esPalindromo(String s) {
-        return false;  
+        StringBuilder cadenaFiltrada = new StringBuilder();
+        
+        for (char c : s.toCharArray()) {
+            if (Character.isLetterOrDigit(c)) {
+                cadenaFiltrada.append(Character.toLowerCase(c));
+            }
+        }
+
+        String cadenaNormal = cadenaFiltrada.toString();
+        String cadenaInvertida = cadenaFiltrada.reverse().toString();
+
+        return cadenaNormal.equals(cadenaInvertida);
     }
 
     public static void main(String[] args) {
@@ -19,3 +30,4 @@ public class Tarea7 {
         }
     }
 }
+
